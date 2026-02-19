@@ -648,6 +648,197 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   line-height: 1.5;
 }
 
+/* ═══════════════ VALUES ═══════════════ */
+.values-section {
+  padding: var(--space-xl) 0 var(--space-2xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.values-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.value-card {
+  padding: var(--space-lg) var(--space-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.value-card:hover {
+  border-color: var(--color-border-accent);
+  transform: translateY(-4px);
+}
+
+.value-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(214, 43, 32, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  color: var(--color-primary);
+}
+
+.value-title {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--color-white);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.value-text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* ═══════════════ TESTIMONIALS ═══════════════ */
+.testimonials-section {
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonials-header {
+  margin-bottom: var(--space-xl);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.testimonial-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: border-color var(--transition);
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-border-accent);
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--color-primary);
+  opacity: 0.15;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  line-height: 1;
+}
+
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonial-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.1em;
+}
+
+/* ═══════════════ NEWSLETTER ═══════════════ */
+.newsletter-section {
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.newsletter-inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: var(--space-sm) 0 var(--space-lg);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-right: none;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.newsletter-form input:focus {
+  border-color: var(--color-primary);
+}
+
+.newsletter-form input::placeholder {
+  color: var(--color-text-subtle);
+}
+
+.newsletter-form .btn {
+  white-space: nowrap;
+}
+
+.service-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
 /* ═══════════════ CTA SECTION ═══════════════ */
 .cta-section {
   padding: var(--space-2xl) 0;
@@ -783,6 +974,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
     gap: var(--space-md);
   }
 
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
@@ -797,6 +996,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .cta-buttons { flex-direction: column; width: 100%; }
   .cta-buttons .btn { width: 100%; justify-content: center; }
   .service-card { padding: var(--space-md); }
+  .values-grid { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { border-right: 1px solid var(--color-border); }
+  .service-actions { flex-direction: column; align-items: flex-start; }
 }
 
 /* ─── Page transitions ─── */
