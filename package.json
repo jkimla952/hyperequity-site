@@ -1,0 +1,10 @@
+{
+  "name": "hyperequity-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hyperequity — Own the Third Wave. AI advisory and education by John Kim.",
+  "scripts": {
+    "dev": "npx serve public -l 3000",
+    "preview": "npx serve public"
+  }
+}

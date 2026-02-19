@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect | Hyperequity</title>
+  <meta name="description" content="Connect with Hyperequity. Reach out to learn how we can help you lead in the AI era." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .connect-section {
+      padding: calc(var(--space-2xl) + 80px) 0 var(--space-2xl);
+    }
+    .connect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: start;
+    }
+    .connect-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--color-text-subtle);
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      padding: 14px 18px;
+      transition: border-color var(--transition-fast);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-primary);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--color-text-subtle);
+    }
+    .form-group textarea { min-height: 140px; resize: vertical; }
+
+    @media (max-width: 768px) {
+      .connect-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Hyperequity Home">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">HYPEREQUITY</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/ai-academy.html" class="nav-link">AI ACADEMY</a>
+        <a href="/about.html" class="nav-link">ABOUT</a>
+        <a href="/connect.html" class="nav-link nav-link--cta" style="background: var(--color-white); color: var(--color-bg);">CONNECT</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <nav>
+      <a href="/ai-academy.html">AI ACADEMY</a>
+      <a href="/about.html">ABOUT</a>
+      <a href="/connect.html">CONNECT</a>
+    </nav>
+  </div>
+
+  <section class="connect-section">
+    <div class="container">
+      <div class="connect-grid">
+        <div data-animate="fade-up">
+          <div class="origin-eyebrow" style="justify-content: flex-start; margin-bottom: var(--space-lg);">
+            <span class="eyebrow-line"></span>
+            <span>GET IN TOUCH</span>
+          </div>
+          <h1 class="section-title" style="margin-bottom: var(--space-md);">Let's Connect</h1>
+          <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: var(--space-xl); max-width: 440px;">
+            Ready to explore how Hyperequity can help you and your team lead in the AI era? We'd love to hear from you.
+          </p>
+          <div style="padding: var(--space-md); border-left: 2px solid var(--color-primary); margin-bottom: var(--space-md);">
+            <p style="font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text); font-style: italic; line-height: 1.6;">
+              "The third wave of the tech revolution is here. The question is: will you lead it?"
+            </p>
+          </div>
+          <p style="font-size: 13px; color: var(--color-text-subtle); letter-spacing: 0.1em;">
+            <strong style="color: var(--color-text-muted);">LOCATION</strong><br/>
+            Austin, Texas
+          </p>
+        </div>
+
+        <div data-animate="fade-up" data-delay="200">
+          <div class="service-card" style="background: var(--color-bg-card);">
+            <form class="connect-form" action="#" method="POST" onsubmit="event.preventDefault(); this.querySelector('.btn').innerHTML='<span>MESSAGE SENT ✓</span>'; this.querySelector('.btn').style.background='#1a7a3a';">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Your company" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your goals..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+                <span>SEND MESSAGE</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-mark">H</span>
+            <span class="logo-text">HYPEREQUITY</span>
+          </div>
+          <p class="footer-tagline">Own the Third Wave</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigate</h4>
+          <a href="/">Home</a>
+          <a href="/ai-academy.html">AI Academy</a>
+          <a href="/about.html">About</a>
+          <a href="/connect.html">Connect</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Location</h4>
+          <p>Austin, Texas</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hyperequity. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

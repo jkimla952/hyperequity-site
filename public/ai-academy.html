@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Academy | Hyperequity</title>
+  <meta name="description" content="AI Academy by Hyperequity — a live course for executives to lead in the AI era. Developed over a decade at Expedia and PayPal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .academy-hero {
+      padding: calc(var(--space-2xl) + 80px) 0 var(--space-xl);
+      text-align: center;
+      position: relative;
+    }
+    .academy-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 30%, rgba(214, 43, 32, 0.06) 0%, transparent 70%);
+    }
+    .academy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-xl);
+    }
+    .academy-card {
+      background: var(--color-bg-elevated);
+      border: 1px solid var(--color-border);
+      padding: var(--space-lg);
+      position: relative;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .academy-card:hover {
+      border-color: var(--color-border-accent);
+      transform: translateY(-4px);
+    }
+    .academy-card-number {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      color: var(--color-primary);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+    .academy-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      margin-bottom: var(--space-sm);
+    }
+    .academy-card p {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(214, 43, 32, 0.1);
+      border: 1px solid rgba(214, 43, 32, 0.2);
+      padding: 8px 20px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: var(--space-lg);
+    }
+    .live-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      animation: pulse 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Hyperequity Home">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">HYPEREQUITY</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/ai-academy.html" class="nav-link" style="color: var(--color-white);">AI ACADEMY</a>
+        <a href="/about.html" class="nav-link">ABOUT</a>
+        <a href="/connect.html" class="nav-link nav-link--cta">CONNECT</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <nav>
+      <a href="/ai-academy.html">AI ACADEMY</a>
+      <a href="/about.html">ABOUT</a>
+      <a href="/connect.html">CONNECT</a>
+    </nav>
+  </div>
+
+  <section class="academy-hero">
+    <div class="container" style="position: relative;">
+      <span class="live-badge" data-animate="fade-up">LIVE COURSE</span>
+      <h1 class="section-title" style="text-align:center; margin-bottom: var(--space-md);" data-animate="fade-up" data-delay="100">AI Academy</h1>
+      <p style="max-width: 640px; margin: 0 auto; color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.8; text-align: center;" data-animate="fade-up" data-delay="200">
+        A grounded yet visionary approach for leaders and their teams to effectively lead in the AI era. Developed over a decade while John was an executive at Expedia and PayPal.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 var(--space-2xl);">
+    <div class="container">
+      <div class="academy-grid">
+        <div class="academy-card" data-animate="fade-up" data-delay="100">
+          <div class="academy-card-number">01</div>
+          <h3>Strategic AI Vision</h3>
+          <p>Understand where AI is heading and how to position your company at the forefront of the third wave of technology platforms.</p>
+        </div>
+        <div class="academy-card" data-animate="fade-up" data-delay="200">
+          <div class="academy-card-number">02</div>
+          <h3>Product Leadership</h3>
+          <p>Learn frameworks for building AI-native products that create durable competitive advantage and category leadership.</p>
+        </div>
+        <div class="academy-card" data-animate="fade-up" data-delay="300">
+          <div class="academy-card-number">03</div>
+          <h3>Go-to-Market Mastery</h3>
+          <p>Navigate the unique challenges of bringing AI-powered products to market with real-world strategies from Fortune 500 experience.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-xl);" data-animate="fade-up" data-delay="400">
+        <div style="max-width: 600px; margin: 0 auto var(--space-lg);">
+          <p style="font-family: var(--font-display); font-size: 1.2rem; line-height: 1.8; color: var(--color-text); font-style: italic;">
+            "AI Academy offers a grounded yet visionary approach for leaders and their teams to effectively lead in the AI era."
+          </p>
+        </div>
+        <a href="/connect.html" class="btn btn--primary btn--large">
+          <span>ENROLL NOW</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-mark">H</span>
+            <span class="logo-text">HYPEREQUITY</span>
+          </div>
+          <p class="footer-tagline">Own the Third Wave</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigate</h4>
+          <a href="/">Home</a>
+          <a href="/ai-academy.html">AI Academy</a>
+          <a href="/about.html">About</a>
+          <a href="/connect.html">Connect</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Location</h4>
+          <p>Austin, Texas</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hyperequity. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
