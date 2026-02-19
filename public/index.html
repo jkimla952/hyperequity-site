@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=7" />
+  <link rel="stylesheet" href="/styles.css?v=8" />
   <style>
     /* Inline hero overrides - bypass CDN cache */
     .hero-bg-image {
@@ -36,6 +36,16 @@
       background: transparent !important;
       backdrop-filter: none !important;
     }
+    /* Staggered children animations */
+    .hero-box > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .hero-box.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+    .hero-box.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+    .hero-box.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+    .hero-box.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
   </style>
 </head>
 <body>
@@ -73,9 +83,9 @@
     <div class="hero-content">
       <div class="hero-box" data-animate="fade-up">
         <img src="https://static.wixstatic.com/media/d0c4fe_e084b569aff54e1898772dafd693f0d2~mv2.png/v1/fill/w_996,h_330,al_c,q_85,usm_0.66_1.00_0.01,enc_auto,quality_auto/Hyperequity%20Logo-25.png" alt="Hyperequity by John Kim" width="498" height="165" class="hero-logo-img" />
-        <h2 class="hero-tagline" data-animate="fade-up" data-delay="200">CREATES AI NATIVE CATEGORY LEADERS.</h2>
-        <p class="hero-description" data-animate="fade-up" data-delay="300"><em>Founded by John Kim, Hyperequity helps digital product and SaaS leaders navigate the AI Era with skill, strategy, and wisdom.</em></p>
-        <a href="/ai-academy.html" class="btn btn--primary" data-animate="fade-up" data-delay="400">
+        <h2 class="hero-tagline">CREATES AI NATIVE CATEGORY LEADERS.</h2>
+        <p class="hero-description"><em>Founded by John Kim, Hyperequity helps digital product and SaaS leaders navigate the AI Era with skill, strategy, and wisdom.</em></p>
+        <a href="/ai-academy.html" class="btn btn--primary">
           <span>TAKE ME TO THE ACADEMY</span>
         </a>
       </div>
