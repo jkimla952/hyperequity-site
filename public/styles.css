@@ -120,7 +120,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   background:
     radial-gradient(ellipse 40% 40% at 25% 60%, rgba(214, 43, 32, 0.08) 0%, transparent 70%),
     radial-gradient(ellipse 30% 30% at 75% 30%, rgba(100, 140, 200, 0.04) 0%, transparent 60%),
-    url('/images/john-kim-square.jpg') center center / cover no-repeat;
+    url('/images/hero-bg.jpg') center center / cover no-repeat;
   opacity: 0.18;
   transition: transform 0.1s linear;
 }
